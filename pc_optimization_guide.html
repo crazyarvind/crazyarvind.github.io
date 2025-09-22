@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Optimization Guide</title>
+    <style>
+        table{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PC Optimization Guide</h1>
+    <h2>Introduction</h2>
+    <p>Growing up, I used really slow computers, which included the HP Pavilion G4 and Dell Inspiron N5010. Their specifications are mentioned below.</p>
+    <table>
+        <tr>
+            <th>Device</th>
+            <th>Processor</th>
+            <th>RAM</th>
+            <th>Storage</th>
+        </tr>
+        <tr>
+            <td>HP Pavilion G4</td>
+            <td>AMD A4-3300M</td>
+            <td>2GB DDR3</td>
+            <td>500GB HDD</td>
+        </tr>
+        <tr>
+            <td>Dell Inspiron N5010</td>
+            <td>Intel i5 650</td>
+            <td>4GB DDR3</td>
+            <td>500GB HDD</td>
+        </tr>
+    </table>
+    <p>As you can see, these machines were really slow, however I optimized them using various methods described below, which allowed me to run games released before 2010, many popular softwares, etc.</p>
+    <h2>Step 1: Backup Your Data</h2>
+    <p>First of all, I highly recommend you to copy all your important data to a USB stick or a cloud service. This is because we are going to fully reset the PC, so we can install a new operating system on it, and optimize it for performance boost.</p>
+    <h2>Step 2: Install A New Operating System</h2>
+    <p><strong>Tip: If you are still using a HDD, I highly suggest switching to an SSD, if it supports your system. Look up your laptop model on google and search for storage upgrades. This will make your experience very smooth.</strong></p>
+    <p>Now when you have backed up your data, it is time to install a new operating system. This will get rid of the old programs, cache, etc. that you previous system had.</p>
+    <p>You have two options from here, which are switching to a Windows operating system or switching to a Linux distribution. For most people, I recommend switching to a Windows OS since it will allow you to play old games and run various softwares without much efforts. Read <a href="#">this</a> article if you really want to switch to Linux.</p>
+    <p>We are going to install the <i>Windows 10 LTSC(Long Term Servicing Channel)</i> version, which removes many useless programs, giving your system more space and resources.</p>
+    <h3>Installing Windows</h3>
+    <ol>
+        <li>Go to <a href="https://massgrave.dev/windows_ltsc_links">this website</a> and download the "Windows 10 LTSC" version.</li>
+        <li>Go to <a href="https://www.ventoy.net/en/download.html">this website</a> and download the windows version of ventoy. This program allows you to make a USB stick bootable, and put an operating system on it.</li>
+        <li>Install and run ventoy, plug in your USB stick(which must have atleast 8GB of storage), select the USB stick name in Ventoy, and hit "install".</li>
+        <li>Drag and drop your Windows 10 LTSC iso file into your USB stick.</li>
+        <li>Search up the "boot key" for your laptop/desktop on google. Restart your PC(while keeping your USB stick plugged in), and as it is booting up, spam your boot key.</li>
+        <li>You will see an interface which allows you to select a bootable storage device. Use your keyboard to select your USB stick.</li>
+        <li>The Ventoy interface will boot up. Select the Windows option and it will lead you to the Windows installation interface.</li>
+        <li>Fill your details in the setup, select your drive on which you want to install Windows(your main drive), and install windows.</li>
+    </ol>
+    <p>Congratulations! You have successfully installed Windows 10 LTSC on your system!</p>
+    <h2>Step 3: Activate Windows</h2>
+    <p>Windows restricts many features if you have not activated your system. To do it, run the following command in your powershell.</p>
+    <p><code>irm https://get.activated.win | iex</code></p>
+    <h2>Step 4: Debloat Your System</h2>
+    <p>Windows runs many services in the background which slow down your PC. We are going to use the Chris Titus Debloater Tool to remove them, along with unecessary softwares.</p>
+    <p>To download it, go to <a href="https://christitus.com/windows-tool/">The Ultimate Windows Utility</a> and follow the instructions given to run the software. Check the boxes according to your convenience, however I do NOT recommend removing microsoft store and microsoft edge, as they can lead to unexpected behaviours.</p>
+    <h2>Step 5: Manual Optimization</h2>
+    <p>There are some manual optimizations you can do, which will push your system to its best performance.</p>
+    <ul>
+        <li>Go to power settings and switch to "Best Performance" if it is not already selected.</li>
+        <li>Go to power button controls and make sure that "pressing the power button will make my pc" is set to "shutdown".</li>
+        <li>Whenever you install a new program like discord, steam or spotify, go to the task manager settings by right clicking on your task bar and selecting task manager. There, go to "startup apps" and disable those programs, otherwise they will always run on startup, slowing down your PC.</li>
+        <li>When playing video games, select the lowest preset and 720p resolution, which will allow the game to run smoothly. You can experiment by increasing the settings a bit, if they work on your system.</li>
+        <li>While running a heavy program or a game, go to task manager>services. Find your program there, right click on it, click "set priority" and then "high". This way, Windows will allocate more resources to your software. This will not give a huge boost, but it is good to do it.</li>
+    </ul>
+    <p><strong>Bonus: I highly recommend you to have atleast 8GB of RAM. Look up your laptop model on google and see if you can upgrade it, and which speed and generation is supported. You can find tutorials on youtube for your exact model on doing the RAM upgrade. For PCs, every hardware component is upgradable as long as it is appropriate with the motherboard.</strong></p>
+</body>
+</html>

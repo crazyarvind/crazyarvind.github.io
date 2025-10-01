@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body{
     margin: 0;
@@ -101,4 +102,53 @@ code{
     font-style: normal;
     border: 1px solid white;
     padding: 0.2%;
+}
+
+nav{
+    background-color: white;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul:first-child{
+    padding-left: 0;
+}
+
+nav a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav a:hover{
+    background-color: black;
+    color: white;
+    transition: 500ms;
+}
+
+@media(max-width: 280px){
+    .mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .onmobile{
+        width: 100%;
+    }
+    .on_mobile{
+        padding: 1px;
+    }
 }
